@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const upiForm = document.getElementById('upi-form');
     const errorMessage = document.getElementById("error-message");
 
-    // Initial setup
     showForm('credit-card');
 
     paymentMethods.forEach(method => {
@@ -13,18 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
             paymentMethods.forEach(item => item.classList.remove('active'));
             method.classList.add('active');
 
-            // Show relevant form based on selected method
             showForm(method.id);
         });
     });
 
     function showForm(methodId) {
-        // Hide all forms initially
         creditCardForm.classList.add('hidden');
         netBankingForm.classList.add('hidden');
         upiForm.classList.add('hidden');
 
-        // Show the selected form
         if (methodId === 'credit-card') {
             creditCardForm.classList.remove('hidden');
         } else if (methodId === 'net-banking') {
@@ -34,9 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Call this function upon successful payment completion
 function completePurchase() {
-    localStorage.removeItem('cart'); // Clear cart data from localStorage
+    localStorage.removeItem('cart'); 
     alert("Thank you for your purchase!");
     window.location.href = "paymentSuccessful.html"; // Redirect to payment successful page
 }
@@ -51,7 +46,7 @@ function completePurchase() {
         if (password !== confirmPassword) {
             errorMessage.textContent = "Passwords do not match!";
         } else {
-            errorMessage.textContent = ""; // Clear error
+            errorMessage.textContent = ""; 
             alert("Do not back.");
             window.location.href = "paymentSuccessful.html"; // Redirect to payment successful page
         }
