@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACBaazaar</title>
+    <link rel="stylesheet" href="paymentPage.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sac-display">
+            <h1>SACBaazaar</h1>
+        </div>
+
+        <br>
+        <h2>Select Payment Method</h2>
+        <div class="payment-methods">
+            <div class="method active" id="credit-card">Credit Card</div>
+            <div class="method" id="net-banking">Net Banking</div>
+            <!-- <div class="method" id="paypal">PayPal</div> -->
+            <div class="method" id="upi">UPI</div>
+        </div>
+
+        <!-- Credit Card Form -->
+        <div class="form-container" id="credit-card-form">
+            <h3>Credit Card Info</h3>
+            <form>
+                <label for="amount">Amount</label>
+                <input type="text" id="amount" placeholder="₹0.00">
+                
+                <label for="name">Name on Card</label>
+                <input type="text" id="name" placeholder="Enter the name">
+                
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="0000-0000-0000-0000">
+                
+                <label for="expiration">Expiration</label>
+                <div class="expiration-container">
+                    <input type="number" id="exp-month" placeholder="MM">
+                    <input type="number" id="exp-year" placeholder="YYYY">
+                </div>
+                
+                <label for="cvv">CVV Number</label>
+                <input type="password" id="cvv" placeholder="***">
+                
+                <!-- <button type="submit">Send</button> -->
+                <a href="paymentSuccessful.html" target="_main" class="button">Pay via Card</a>
+            </form>
+        </div>
+
+        <!-- Net Banking Form -->
+        <!-- Net Banking Form -->
+<div class="form-container hidden" id="net-banking-form">
+    <h3>Net Banking Info</h3>
+    <form id="net-banking-payment-form">
+        <label for="amount">Amount</label>
+        <input type="text" id="amount-net" placeholder="₹0.00">
+        
+        <label for="bank">Select Bank</label>
+        <select id="bank">
+            <option value="">Select your bank</option>
+            <option value="sbi">State Bank of India</option>
+            <option value="hdfc">HDFC Bank</option>
+            <option value="icici">ICICI Bank</option>
+        </select>
+
+        <label for="userId">User ID</label>
+        <input type="text" id="userId" placeholder="userId">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" class="password-net" placeholder="Password">
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" class="password-net" placeholder="Confirm Password">
+
+        <span id="error-message" style="color: red; font-size: 0.9em;"></span>
+        
+        <!-- Pay button -->
+        <a href="paymentSuccessful.html" target="_main" class="button" onclick="validatePasswords(event)">Pay via Netbanking</a>
+    </form>
+</div>
+
+
+        <!-- UPI Form -->
+        <div class="form-container hidden" id="upi-form">
+            <h3>UPI Payment</h3>
+            <form>
+                <label for="amount">Amount</label>
+                <input type="text" id="amount-upi" placeholder="₹0.00">
+                
+                <label for="upi-id">UPI ID</label>
+                <input type="text" id="upi-id" placeholder="your-upi-id@bank">
+                
+                <button type="submit">Pay with UPI</button>
+                <!-- <a href="paymentSuccessful.html" target="_main" class="button">Pay with UPI</a> -->
+                <!-- window.location.href = "paymentSuccessful.html"; // Redirect to paymentSuccessful.html -->
+
+            </form>
+        </div>
+    </div>
+
+    <script src="paymentPage.js"></script>
+</body>
+</html>

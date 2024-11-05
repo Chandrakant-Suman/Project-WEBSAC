@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SACbazaar - E-commerce Clothing Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="Homepage.css">
+</head>
+<body>
+
+  <header class="home-header">
+    <h1>Welcome to SACbazaar</h1>
+    <p>Your one-stop shop for trendy clothing!</p>
+  </header>
+
+  <main>
+    <div class="collection">
+      <p class="collection-head">Our Collection</p>
+      <!-- <div type="button" class="cart-icon">
+        <h4 type="button">Cart</h4>
+        <i class="fa-solid fa-cart-shopping" type="button"></i> -->
+        <button onclick="goToCart()">Go to Cart</button>
+      </div>
+       
+
+    </div>
+    
+
+    <div class="product-list">
+      <div class="product" id="product1">
+        <img src="product1.jpg" alt="Shirt">
+        <h3>Shirt</h3>
+        <p>Price: ₹320</p>
+        <p>Size: M, L, XL</p>
+        <button class="cart-btn" onclick="addItemToCart('Shirt', 320)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product2">
+        <img src="product2.jpg" alt="Sarees">
+        <h3>Sarees</h3>
+        <p>Price: ₹3000</p>
+        <p>Size: S, M, L</p>
+        <button class="cart-btn" onclick="addItemToCart('Sarees', 3000)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product3">
+        <img src="product3.jpg" alt="Jeans">
+        <h3>Jeans</h3>
+        <p>Price: ₹2800</p>
+        <p>Size: 30, 32, 34, 36</p>
+        <button class="cart-btn" onclick="addItemToCart('Jeans', 2800)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product4">
+        <img src="product4.jpg" alt="Jacket">
+        <h3>Jacket</h3>
+        <p>Price: ₹4900</p>
+        <p>Size: M, L, XL</p>
+        <button class="cart-btn" onclick="addItemToCart('Jacket', 4900)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product5">
+        <img src="product5.jpg" alt="SweatShirt">
+        <h3>SweatShirt</h3>
+        <p>Price: ₹2500</p>
+        <p>Size: M, L, XL</p>
+        <button class="cart-btn" onclick="addItemToCart('SweatShirt', 2500)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product6">
+        <img src="product6.jpg" alt="Nightwares">
+        <h3>Nightwares</h3>
+        <p>Price: ₹1500</p>
+        <p>Size: S, M, L</p>
+        <button class="cart-btn" onclick="addItemToCart('Nightwares', 1500)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product7">
+        <img src="product7.jpg" alt="Sport-Shorts">
+        <h3>Sport-Shorts</h3>
+        <p>Price: ₹1200</p>
+        <p>Size: 30, 32, 34, 36</p>
+        <button class="cart-btn" onclick="addItemToCart('Sport-Shorts', 1200)">Add to Cart</button>
+      </div>
+
+      <div class="product" id="product8">
+        <img src="product8.jpg" alt="T-Shirts">
+        <h3>T-Shirts</h3>
+        <p>Price: ₹800</p>
+        <p>Size: M, L, XL</p>
+        <button class="cart-btn" onclick="addItemToCart('T-Shirts', 800)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 SACbazaar. All Rights Reserved.</p>
+  </footer>
+
+  <script src="Homepage.js"></script>
+</body>
+</html>
