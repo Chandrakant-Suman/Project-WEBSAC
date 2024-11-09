@@ -9,6 +9,6 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     } else {
         errorMessage.textContent = "";
         alert("Registration successful!");
-        window.location.href = "Homepage.html"; // Redirect to Homepage.html
+        window.location.href = "home.html"; // Redirect to Homepage.html
     }
 });
