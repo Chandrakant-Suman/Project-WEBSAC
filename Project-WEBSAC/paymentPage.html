@@ -37,13 +37,13 @@
         }
         
         .button:hover {
-            background-color: #3838a8;
+            background-color: #6870c8;
         }
         
         .container {
             width: 400px;
             padding: 20px;
-            background-color: rgb(89, 179, 193);
+            background-color: rgb(184, 230, 230);
             border-radius: 8px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -108,7 +108,11 @@
         .hidden {
             display: none;
         }
-        
+      
+        #card-element{
+            color: #fdfdfd;
+        }
+
         #card-errors, #error-message {
             color: red;
             font-size: 0.9em;
@@ -131,8 +135,8 @@
         <div class="payment-methods">
             <div class="method active" id="credit-card">Credit Card</div>
             <div class="method" id="net-banking">Net Banking</div>
-            <div class="method" id="upi">UPI</div>
-            <div class="method" id="qr">QR Code</div>
+            <!-- <div class="method" id="upi">UPI</div> -->
+            <div class="method" id="qr">UPI</div>
         </div>
 
         <!-- Credit Card Form (Stripe) -->
@@ -146,7 +150,9 @@
                 <input type="text" id="name" placeholder="Enter the name" required>
                 
                 <label>Card Details</label>
-                <div id="card-element"></div> <!-- Stripe Card Element -->
+                <!-- <input type="text"  id="card-element" placeholder="card no." required>
+                <input type="text" role="alert" id="card-element" placeholder="MM/YY" required> -->
+                <div id="card-element" ></div> <!--Stripe Card Element-->
                 <div id="card-errors" role="alert"></div>
 
                 <button type="submit" class="button">Pay via Card</button>
@@ -183,8 +189,8 @@
             </form>
         </div>
 
-        <!-- UPI Form -->
-<!--         <div class="form-container hidden" id="upi-form">
+        <!--UPI Form -->
+        <div class="form-container hidden" id="upi-form">
             <h3>UPI Payment</h3>
             <form id="upi-payment-form">
                 <label for="amount-upi">Amount</label>
@@ -195,7 +201,7 @@
                 
                 <button type="button" onclick="validateUPI()" class="button">Pay with UPI</button>
             </form>
-        </div> -->
+        </div>
 
         <!-- QR Code Payment Form -->
         <div class="form-container hidden" id="qr-form">
@@ -302,7 +308,8 @@
         };
 
         // UPI Validation
-        window.validateUPI = function () {
+
+      window.validateUPI = function () {
             const amount = document.getElementById("amount-upi").value;
             const upiId = document.getElementById("upi-id").value;
 
@@ -312,7 +319,8 @@
             } else {
                 alert("Please fill in all fields.");
             }
-        };
+   };
+
 
         // QR Code Generation
         window.generateQRCode = function () {
