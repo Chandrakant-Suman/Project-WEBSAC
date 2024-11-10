@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SACBaazaar - Payment</title>
-    <!-- <link rel="stylesheet" href="paymentPage.css"> -->
+<!--     <link rel="stylesheet" href="paymentPage.css"> -->
     <style>
         * {
             margin: 0;
@@ -323,8 +323,7 @@
                 const qrCodeElement = document.getElementById("qr-code");
                 qrCodeElement.innerHTML = ""; // Clear any existing QR code
                 
-                const upiString = upi
-                //pay?pa=${upiId}&am=${amount}&cu=INR;
+                const upiString = `upi://pay?pa=${upiId}&am=${amount}&cu=INR`;
                 new QRCode(qrCodeElement, upiString);
             } else {
                 alert("Please fill in all fields.");
